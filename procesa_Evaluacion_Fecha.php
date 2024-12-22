@@ -25,11 +25,9 @@ try {
             $stmt->bindParam(':id_Eval', $id_Eval);
 
             if ($stmt->execute()) {
-                // Redirigir o mostrar un mensaje de éxito
-                echo "La fecha de cierre se actualizó correctamente.";
-                // Redirigir (opcional)
-                // header("Location: visor_evaluaciones.php");
-                // exit();
+                // Redirigir a la URL después del UPDATE
+                header("Location: https://radiadoresalbuerno.cl/sistemaAlbuerno/index2.php");
+                exit; // Detener la ejecución después de redirigir
             } else {
                 echo "Error al actualizar la fecha de cierre.";
             }
